@@ -1,0 +1,21 @@
+body {background-color: rgb(200, 233, 245)}
+
+h1{
+    margin-top: 100pt;
+    font-family: 'Fredoka One';
+    text-align: center;
+    text-shadow: 2px, 2px;
+    font-weight: 500;
+    color: rgb(26, 35, 126);
+    font-size: 50;
+} 
+
+h3{
+    font-size: 40px;
+    font-weight: 500;
+} 
+
+t, ul{
+    font-size: 30px;
+    font-weight: 400;
+}

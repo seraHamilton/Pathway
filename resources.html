@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="rstyle.css" />
+    <title>Resources</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&family=Fredoka+One&family=Ruda:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree&family=Fredoka+One&family=Nunito&family=Ruda:wght@900&family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- DropDown -->
+    <script>$(".dropdown-trigger").dropdown(); </script>
+    <script>// When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }</script>
+</head>
+
+<body>
+    <ul id="dropdown1" class="dropdown-content" style="z-index: 999">
+        <li><a href="/learning types/visual.html">Visual Learners</a></li>
+        <li><a href="/learning types/auditory.html">Auditory Learners</a></li>
+        <li><a href="/learning types/kinesthetic.html">Kinesthetic Learners</a></li>
+        </ul>
+      
+      
+        <nav id="navbar" style="position: fixed; top: 0; width: 100%; z-index:998; height: 60px">
+        <div class="nav-wrapper z-depth-0.7 indigo darken-4">
+          <a href="/" style="font-family: 'Fredoka One'; margin-left: 20px" class="brand-logo">Pathways</a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/quiz.html">Learner Quiz</a></li>
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Learner Types</a></li>
+            <li><a href="/resources.html">More Resources</a></li>
+          </ul>
+        </div>
+      </nav>
+  
+  
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/quiz.html">Learner Quiz</a></li>
+        <li><a href="\learning types\visual.html">Visual Learning</a></li>
+        <li><a href="\learning types\auditory.html">Auditory Learning</a></li>
+        <li><a href="\learning types\kinesthetic.html">Kinesthetic Learning</a></li>
+        <li><a href="/resources.html">More Resources</a></li>
+      </ul>
+    <h1>Check out these links for more resources:</h1>
+
+    <div class="container">
+        <ul class="browser-default">
+            <li><a href="https://www.missouristate.edu/Assets/busadv/p-30.pdf">Three Learning Styles</a></li>
+            <li><a href="https://www.rasmussen.edu/student-experience/college-life/most-common-types-of-learners/">Different Types of Learners: What College Students Should Know</a></li>
+            <li><a href="https://www.online-distance-learning-education.com/learning.html">Learning</a></li>
+            <li><a href="https://learningstyles.org/">Institute for Learning Styles Research</a></li>
+        </ul>
+
+        <h2>Visual Learning:</h2>
+        <ul class="browser-default">
+            <li><a href="https://files.eric.ed.gov/fulltext/EJ1112894.pdf">The Role of Visual Learning in Improving Students’ High-Order
+                Thinking Skills</a></li>
+            <li><a href="https://www.time4learning.com/learning-styles/visual-spatial.html">Visual Learning Style</a></li>
+            <li><a href="https://www.indeed.com/career-advice/career-development/visual-learner">A Guide to Visual Learning</a></li>
+        </ul>
+
+        <h2>Auditory Learning:</h2>
+        <ul class="browser-default">
+            <li><a href="https://www.wgu.edu/blog/2020/08/auditory-learning-style.html">Auditory Learning Style Explained</a></li>
+            <li><a href="https://iopscience.iop.org/article/10.1088/1742-6596/895/1/012058/pdf">Contribution of Auditory Learning Style to Students' Mathematical Connection Ability</a></li>
+            <li><a href="https://bau.edu/blog/auditory-learner/">Auditory Learner: Characteristics & Benefits</a></li>
+        </ul>
+
+        <h2>Kinesthetic Learning:</h2>
+        <ul class="browser-default">
+            <li><a href="https://www.houghton.edu/current-students/center-for-student-success/academic-support-and-accessibility-services/study-advisement/general-study-information/kinesthetic-learning-style/#:~:text=Definition%3A%20A%20kinesthetic%2Dtactile%20learning,%2C%20producing%20multi%2Dsensory%20learning.">Kinesthetic Learning Styles</a></li>
+            <li><a href="https://bau.edu/blog/kinesthetic-learner/">What Is A Kinesthetic Learner</a></li>
+            <li><a href="https://serc.carleton.edu/NAGTWorkshops/mineralogy/xtlsymmetry/kinesthetics.html">Kinesthetic Learning</a></li>
+        </ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script> M.AutoInit();</script>
+    <footer class="page-footer indigo darken-4">
+      <div class="container">
+        <div class="row">
+            <h6 class="grey-text text-lighten-4">Pathways is a collaborative effort for students, by students. Originally developed at MIT, our intuitive methodology is designed to foster meaningful discussion, connecting student experience to student learning styles.<br><br> © 2022 Pathways Learning Collective</h6>
+          <div style="height: 20px">
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

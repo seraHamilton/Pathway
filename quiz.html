@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script>$(".dropdown-trigger").dropdown(); </script>
+    <title>Learning Quiz</title>
+    <!-- Chart -->
+    <!-- <script src="https://cdn.anychart.com/js/8.0.1/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/js/8.0.1/anychart-pie.min.js"></script> -->
+
+    <script>// When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      
+
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }</script>
+    <link rel="stylesheet" href="qstyle.css" />
+    <script>// When the user scrolls the page, execute myFunction
+      window.onscroll = function() {myFunction()};
+      
+      // Get the navbar
+      var navbar = document.getElementById("navbar");
+      
+      // Get the offset position of the navbar
+      var sticky = navbar.offsetTop;
+      
+      // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }</script>
+</head>
+<body>
+ <!-- Navigation Bar -->
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content" style="z-index: 1000">
+      <li><a href="/learning types/visual.html">Visual Learners</a></li>
+      <li><a href="/learning types/auditory.html">Auditory Learners</a></li>
+      <li><a href="/learning types/kinesthetic.html">Kinesthetic Learners</a></li>
+      </ul>
+    
+    
+    <nav id="navbar" style="position: fixed; top: 0; width: 100%; z-index:999; height: 60px">
+      <div class="nav-wrapper z-depth-0.7 indigo darken-4">
+        <a href="/index.html" style="font-family: 'Fredoka One'; margin-left: 20px" class="brand-logo">Pathways</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/index.html">Home</a></li>
+          <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Learner Types</a></li>
+          <li><a href="/resources.html">More Resources</a></li>
+        </ul>
+      </div>
+    </nav>
+
+
+    <ul class="sidenav" id="mobile-demo">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/quiz.html">Learner Quiz</a></li>
+      <li><a href="\learning types\visual.html">Visual Learning</a></li>
+      <li><a href="\learning types\auditory.html">Auditory Learning</a></li>
+      <li><a href="\learning types\kinesthetic.html">Kinesthetic Learning</a></li>
+      <li><a href="/resources.html">More Resources</a></li>
+    </ul>
+
+      <div class="header">
+        <div class="progress-container">
+          <div class="progress-bar" id="myBar"></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 200px" class="content">
+
+      <h1>What type of learner are you?</h1>
+
+   <div class="center-align">
+      <h2>Question 1</h2>
+      <h3>What type of homework assignments do you prefer?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q1a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2" >Videos</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q1a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Readings</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q1a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Writings</button>
+        </div>
+      </div> 
+      
+      <h2>Question 2</h2>
+      <h3>What teaching style do you prefer?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q2a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Lectures/Primarily Listening</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q2a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Active Discussions</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q2a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Hands On Engagement</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q2a4" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Slides Presentation</button>
+        </div>
+      </div> 
+      
+      <h2>Question 3</h2>
+      <h3>How good are you at understanding body language?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q3a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Very Poor</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q3a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Poor</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q3a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Neutral</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q3a4" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Alright</button>
+        </div>
+        <div class="answer-choice">
+            <button id="q3a5" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Excellent</button>
+        </div>
+      </div> 
+
+      <!-- Add below ?s to js -->
+      <h2>Question 4</h2>
+      <h3>How do you best explain topics/teach others?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q4a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Drawings on Whiteboard/Paper</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q4a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Verbal Explanation</button>
+        </div>
+      </div> 
+
+      <h2>Question 5</h2>
+      <h3>Rate your preference for group work on difficult assignments</h3>
+      <div class="question">
+        <div class="answer-choice">
+            <button id="q5a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Very Poor</button>
+          </div>
+          <div class="answer-choice">
+            <button id="q5a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Poor</button>
+          </div>
+          <div class="answer-choice">
+            <button id="q5a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Neutral</button>
+          </div>
+          <div class="answer-choice">
+            <button id="q5a4" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Alright</button>
+          </div>
+          <div class="answer-choice">
+              <button id="q5a5" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Excellent</button>
+          </div>
+      </div> 
+
+      <h2>Question 6</h2>
+      <h3>What helps you remember topics the best?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q6a1" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Reciting Outloud</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q6a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Repeated Writing</button>
+        </div>
+        <div class="answer-choice">
+            <button id="q6a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Rereading Texts/Notes</button>
+        </div>
+      </div> 
+
+      <h2>Question 7</h2>
+      <h3>Do you take notes in class?</h3>
+      <div class="question">
+        <div class="answer-choice">
+          <button id="q7a1" class="btn waves-effect.waves-blue indigo darken-4 z-depth-2">Yes</button>
+        </div>
+        <div class="answer-choice">
+          <button id="q7a2" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">No</button>
+        </div>
+        <div class="answer-choice">
+            <button id="q7a3" class="btn waves-effect waves-purple indigo darken-4 z-depth-2">Sometimes</button>
+        </div>
+      </div> 
+
+      <div class="resultSect">
+        <h2 id="result">Your result is... </h2>
+      </div>
+      
+      <div class="description">
+        <br>
+        <p style="font-size: 100%;" id="photo">       </p>
+        <p style="font-size: 250%" id="desc">      </p>
+        <p style="font-size: 250%" id="learn">      </p>
+        <br>
+      </div>
+      <br>
+      <div class="retake">
+        <button id="retakeButton" class="btn waves-effect waves-purple indigo darken-4 z-depth-2"><i class="material-icons right">refresh</i>
+          Retake the Quiz
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <script>
+      // When the user scrolls the page, execute myFunction 
+      window.onscroll = function() {myFunction()};
+      
+      function myFunction() {
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
+      }
+      </script>
+  <footer style="margin-top: 20px;" class="page-footer indigo darken-4">
+    <div class="container">
+      <div class="row">
+          <h6 class="grey-text text-lighten-4">Pathways is a collaborative effort for students, by students. Originally developed at MIT, our intuitive methodology is designed to foster meaningful discussion, connecting student experience to student learning styles.<br><br> © 2022 Pathways Learning Collective</h6>
+        <div style="height: 20px">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script> M.AutoInit();</script>
+  </body>
+  <script src="javascript.js"></script>
+</html>
