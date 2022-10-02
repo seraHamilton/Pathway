@@ -1,3 +1,10 @@
+body {
+    background: url('https://cdn.discordapp.com/attachments/1022693051807830037/1026026200407232652/stylish-wavy-pattern_1409-1077.jpg');
+    background-size: cover;
+   
+    
+  } 
+
 h1{
     margin-top: 100pt;
     font-family: 'Fredoka One';
@@ -10,4 +17,20 @@ h1{
 
 ul{
     font-size: 30px
+}
+
+h2{
+     font-family: 'Fredoka One';
+     color: rgba(245, 245, 245) !important;
+}
+
+.browser-default{
+    font-family: 'Figtree', sans-serif;
+    color: rgba(245, 245, 245) !important;
+}
+
+a{
+    color: rgb(26, 35, 126);
+    font-weight: 30;
+    text-shadow: 0.1em 0.1em 0.3em rgba(255, 255, 255, 0.51);
 }
