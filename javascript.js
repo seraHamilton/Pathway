@@ -51,9 +51,6 @@ var desc = document.getElementById("desc");
 var learn = document.getElementById("learn");
 var photo = document.getElementById("photo");
 
-// //vars for percentages
-// var visPercent = document.getElementById("vis");
-
 //Option to retake quiz
 var retake = document.getElementById("retakeButton");
 
@@ -89,7 +86,6 @@ q6a3.addEventListener("click", function() {addPoints(0,6,2);}); //2v
 q7a1.addEventListener("click", function() {addPoints(2,7,2);}); //2k
 q7a2.addEventListener("click", function() {addPoints(3,7,2);}); //2v, 2a
 q7a3.addEventListener("click", function() {addPoints(2,7,1);}); //k
-//10v, 11k, 11a
 
 //allow retakes
 retake.addEventListener("click", reset);
@@ -118,6 +114,9 @@ function checkDuplicates(){
     else if (visScore - kinScore <= 2){
       max = 4;
     }
+    else if (visScore - audScore <= 2){
+      max = 3;
+    }
   }
   else if (max == 1){
     if ((audScore - visScore <= 2) && (audScore - kinScore <=2)){
@@ -126,6 +125,9 @@ function checkDuplicates(){
     else if (audScore - kinScore <= 2){
       max = 5;
     }
+    else if (audScore - visScore <= 2){
+      max = 3;
+    }
   }
   else {
     if ((kinScore - visScore <= 2) && (kinScore - audScore <=2)){
@@ -133,6 +135,9 @@ function checkDuplicates(){
     }
     else if (kinScore - audScore <= 2){
       max = 5;
+    }
+    else if (kinScore - visScore <= 2){
+      max = 4;
     }
   }
 }
@@ -171,47 +176,33 @@ function updatePhoto() {
     learn.innerHTML = visStr;
   }
   else if (max == 1) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://www.thoughtco.com/thmb/4ucVoiNF3bM_eIAQh6NB-1yI8Lk=/1937x1453/smart/filters:no_upscale()/172606202_HighRes-56a537103df78cf77286f9e3.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = audStr;
   }
   else if (max == 2) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://www.thoughtco.com/thmb/4PbZABiTQD3V9UfpRUymIWPb87Y=/2122x1415/filters:no_upscale():max_bytes(150000):strip_icc()/Science-Echo-Cultura-Getty-Images-137548114-58958abe3df78caebc8ce47d.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = kinStr;
   }
   else if (max == 3) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://www.headphonesty.com/wp-content/uploads/2020/07/photo-1513258496099-48168024aec0.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = visStr + audStr;
   }
   else if (max == 4) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://assets.ltkcontent.com/images/12859/man-creative-writing_16a270c446.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = visStr + kinStr;
   }
   else if (max == 5) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://polarisproject.org/wp-content/uploads/2019/10/Polaris_Visa_Photos_p11-800x800.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = audStr + kinStr;
   }
   else if (max == 6) {
-    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://media.istockphoto.com/photos/man-with-magnifying-glass-picture-id465483025\" width=\"800px\">" + "<br>"
+    photo.innerHTML = "<img class=\"z-depth-3\" src=\"https://d39l2hkdp2esp1.cloudfront.net/img/photo/125548/125548_00_2x.jpg\" width=\"50%\">" + "<br>"
     learn.innerHTML = visStr + audStr + kinStr;
   }
   else {
     photo.innerHTML = "   ";
   }
 }
-
-// function displayPercent() {
-//   var total = visScore + audScore + kinScore;
-//   var visPercent = visScore*100/total;
-//   var audPercent = audScore*100/total;
-//   var kinPercent = kinScore*100/total;
-  
-//   desc.innerHTML = "Visual Learning: " + parseInt(visPercent, 10) + 
-//     "%<br />Auditory Learning: " + parseInt(audPercent, 10) + 
-//     "%<br />Kinesthetic Learning: " + parseInt(kinPercent, 10) + 
-//     "%";
-// }
-
-// IGNORE THIS
   function displayPercent() {
     var total = visScore + audScore + kinScore;
     var visPercent = visScore*100/total;
@@ -223,9 +214,9 @@ function updatePhoto() {
     const kinPerStr = "<br /> Kinestetic Learning: " + parseInt(kinPercent, 10) + "%";
     var percentStr = "";
 
-    if ((visPercent > audPercent) && (visPercent > kinPercent)){
+    if ((visPercent >= audPercent) && (visPercent >= kinPercent)){
       percentStr = visPerStr;
-      if (audPercent > kinPercent){
+      if (audPercent >= kinPercent){
         percentStr += audPerStr;
         percentStr += kinPerStr;
       }
@@ -234,9 +225,9 @@ function updatePhoto() {
         percentStr += audPerStr;
       }
     }
-    else if ((audPercent > visPercent) && (audPercent > kinPercent)){
+    else if ((audPercent >= visPercent) && (audPercent >= kinPercent)){
       percentStr = audPerStr;
-      if (visPercent > kinPercent){
+      if (visPercent >= kinPercent){
         percentStr += visPerStr;
         percentStr += kinPerStr;
       }
@@ -247,7 +238,7 @@ function updatePhoto() {
     }
     else{
       percentStr = kinPerStr;
-      if (visPercent > audPercent){
+      if (visPercent >= audPercent){
         percentStr += visPerStr;
         percentStr += audPerStr;
       }
@@ -283,7 +274,7 @@ function checkQuestionCount(){
   }
 }
 
-//type: vis=0, aud=1, kin=2
+//type: vis=0, aud=1, kin=2, vis/aud=3, vis/kin=4, aud/kin=5, vis/aud/kin=6
 function addPoints(type, dis, scalar){
   //adds points based on type selected
   if (type == 0){
@@ -446,10 +437,6 @@ function reset() {
   result.innerHTML = "Your result is... ";
   enableAll();
 }
-
-// export {visPercent};
-// export {audPercent};
-// export {kinPercent};
 
 document.addEventListener('DOMContentLoaded', function() {
   var elems = document.querySelectorAll('.parallax');

@@ -15,7 +15,8 @@ h1{
 h2{
   text-align: center;
   color: whitesmoke;
-  text-shadow: 0.1em 0.1em 0.3em black
+  text-shadow: 0.1em 0.1em 0.3em black;
+  font-weight: 600;
 }
 
 h3 {
